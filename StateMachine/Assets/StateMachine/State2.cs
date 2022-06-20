@@ -1,18 +1,27 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
+// every state script must be a subclass of StateExtension
 public class State2 : StateExtension
 {
-    // Start is called before the first frame update
-    void Start()
+    public UpdateUIText updateUIText;
+    public TextMeshProUGUI text;
+    public TextMeshProUGUI state2Text;
+
+    private void OnEnable()
     {
-        
+        state2Text.color = Color.yellow;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void FixedUpdate() 
     {
-        
+        updateUIText.UpdateDecrementText(text, "Timer Decreasing: ");
+    }
+
+    private void OnDisable()
+    {
+        state2Text.color = Color.white;
     }
 }

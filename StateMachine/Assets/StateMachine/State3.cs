@@ -1,18 +1,29 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
+// every state script must be a subclass of StateExtension
 public class State3 : StateExtension
 {
-    // Start is called before the first frame update
-    void Start()
+    // UI timer will stop at its current value
+
+    public UpdateUIText updateUIText;
+    public TextMeshProUGUI text;
+    public TextMeshProUGUI state3Text;
+
+    private void OnEnable()
     {
-        
+        state3Text.color = Color.yellow;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void FixedUpdate()
     {
-        
+        updateUIText.UpdateIntText(text, updateUIText.interger, "Timer: ");
+    }
+
+    private void OnDisable()
+    {
+        state3Text.color = Color.white;
     }
 }
