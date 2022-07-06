@@ -54,7 +54,8 @@ public class NewestStateMachine : MonoBehaviour
 
     public void SetState(NewState newState)
     {
-        // if newState.stateName does not = any of the stateNames in the list of states, then set the current state to the original state and return out of the function
+        // if newState.stateName does not = any of the stateNames in the list of states, 
+        // then set the current state to the original state and return out of the function
         if (!states.Contains(newState))
         {
             // disable the current state
@@ -93,13 +94,11 @@ public class NewestStateMachine : MonoBehaviour
         
         if (Input.GetKeyDown(KeyCode.Alpha3))
         {
-            // set state to state that contains the statename "State3"
             SetState(states.Find(state => state.stateName == "State3"));
         }
 
         if (Input.GetKeyDown(KeyCode.Alpha4))
         {
-            // set state to state that contains the statename "State4"
             SetState(states.Find(state => state.stateName == "State4"));
         }
     }

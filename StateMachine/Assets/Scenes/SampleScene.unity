@@ -481,7 +481,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   updateUIText: {fileID: 266837325}
-  stateMachine: {fileID: 537668223}
   text: {fileID: 266837326}
   state1Text: {fileID: 1004299949}
 --- !u!4 &388262788
@@ -612,8 +611,6 @@ GameObject:
   - component: {fileID: 537668220}
   - component: {fileID: 537668219}
   - component: {fileID: 537668221}
-  - component: {fileID: 537668222}
-  - component: {fileID: 537668223}
   m_Layer: 0
   m_Name: StateMachine
   m_TagString: Untagged
@@ -668,77 +665,13 @@ MonoBehaviour:
   states:
   - stateName: State1
     stateScript: {fileID: 388262787}
-    StateTransitionEvent:
-      _PersistentCalls: []
   - stateName: State2
     stateScript: {fileID: 1044994696}
-    StateTransitionEvent:
-      _PersistentCalls: []
   - stateName: State3
     stateScript: {fileID: 85618075}
-    StateTransitionEvent:
-      _PersistentCalls: []
   currentState:
     stateName: 
     stateScript: {fileID: 0}
-    StateTransitionEvent:
-      _PersistentCalls: []
---- !u!114 &537668222
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 537668218}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a019ed2aa55d2cb4182fb68dac16901e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nameOfStateMachine: reg state machine
-  states:
-  - stateName: state 1
-    stateScript: {fileID: 388262787}
-    StateTransitionEvent:
-      _PersistentCalls: []
-  - stateName: state 2
-    stateScript: {fileID: 1044994696}
-    StateTransitionEvent:
-      _PersistentCalls: []
-  - stateName: state 3
-    stateScript: {fileID: 85618075}
-    StateTransitionEvent:
-      _PersistentCalls: []
-  currentState: {fileID: 0}
-  previousState: {fileID: 0}
---- !u!114 &537668223
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 537668218}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e812687df8f3adb4cbe97d2b6521389a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nameOfStateMachine: State Machine V2
-  states:
-  - stateName: State1
-    stateScript: {fileID: 388262787}
-    StateTransitionEvent:
-      _PersistentCalls: []
-  - stateName: State2
-    stateScript: {fileID: 1044994696}
-    StateTransitionEvent:
-      _PersistentCalls: []
-  - stateName: State3
-    stateScript: {fileID: 85618075}
-    StateTransitionEvent:
-      _PersistentCalls: []
-  currentState: State1
-  previousState: 
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0

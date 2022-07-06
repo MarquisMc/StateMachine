@@ -7,7 +7,6 @@ using TMPro;
 public class State1 : StateExtension
 {
     public UpdateUIText updateUIText;
-    public StateMachineV2 stateMachine;
     public TextMeshProUGUI text;
     public TextMeshProUGUI state1Text;
 
@@ -18,14 +17,6 @@ public class State1 : StateExtension
     private void FixedUpdate() 
     {
         updateUIText.UpdateIncrementText(text, "Timer Increasing: ");
-    }
-
-    public void StateTransition()
-    {
-        if (Input.GetKeyDown(KeyCode.Alpha2))
-        {
-            stateMachine.SetState("State2");
-        }
     }
 
     private void OnDisable() {

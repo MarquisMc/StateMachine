@@ -11,7 +11,7 @@ public class NewState
     
     public StateExtension stateScript;
 
-    public UltEvent StateTransitionEvent;
+    //public UltEvent StateTransitionEvent;
 
     public NewState(string stateName, StateExtension stateScript)
     {
