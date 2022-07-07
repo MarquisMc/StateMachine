@@ -24,7 +24,7 @@ https://github.com/MarquisMc/StateMachine.git
 ## How to use
 ### 1. Add NewestStateMachine Component 
 
-NewestStateMachine image goes here
+![](StateMachine/Assets/Images/Newest%20State%20Machine.PNG)
 
 ### 2. Create a new state
 
@@ -60,13 +60,20 @@ public class StateTemplate : StateExtension
 
 ### 3. Add and set up states
 
-Add state image goes here
+#### Add state
+![](StateMachine/Assets/Images/Add%20New%20State.PNG)
 
-set up state gif goes here
+#### Set up state
+![](StateMachine/Assets/Images/Setting%20up%20State%20gif.gif)
 
 ### 4. Set up state transitions
 
-set up state transition image goes here
+![](StateMachine/Assets/Images/Setting%20up%20State%20Transitions%20gif.gif)
+
+### Live Example 
+
+#### Transitioning between states
+![](StateMachine/Assets/Images/Transition%20between%20states%20live%20gif.gif)
 
 ## Support
 
