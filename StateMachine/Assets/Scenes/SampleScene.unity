@@ -477,7 +477,7 @@ GameObject:
   m_Component:
   - component: {fileID: 388262788}
   - component: {fileID: 388262787}
-  - component: {fileID: 388262789}
+  - component: {fileID: 388262790}
   m_Layer: 0
   m_Name: State 1
   m_TagString: Untagged
@@ -500,7 +500,7 @@ MonoBehaviour:
   updateUIText: {fileID: 266837325}
   text: {fileID: 266837326}
   state1Text: {fileID: 1004299949}
-  boolData: {fileID: 388262789}
+  boolData: {fileID: 388262790}
 --- !u!4 &388262788
 Transform:
   m_ObjectHideFlags: 0
@@ -515,7 +515,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &388262789
+--- !u!114 &388262790
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -527,7 +527,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05e34ac1b565e4c4781217b69e9a1012, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Name: State 1 Transition bool
+  Name: first bool
   data: 0
 --- !u!1 &471442046
 GameObject:
@@ -699,7 +699,7 @@ MonoBehaviour:
     stateScript: {fileID: 388262787}
     stateTransitions:
     - stateTransitionName: State2
-      boolData: {fileID: 388262789}
+      boolData: {fileID: 388262790}
   - stateName: State2
     stateScript: {fileID: 1044994696}
     stateTransitions:
@@ -708,7 +708,7 @@ MonoBehaviour:
   - stateName: State3
     stateScript: {fileID: 85618075}
     stateTransitions:
-    - stateTransitionName: State3
+    - stateTransitionName: State1
       boolData: {fileID: 85618077}
   currentState:
     stateName: 
