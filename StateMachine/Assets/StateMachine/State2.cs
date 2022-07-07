@@ -9,6 +9,7 @@ public class State2 : StateExtension
     public UpdateUIText updateUIText;
     public TextMeshProUGUI text;
     public TextMeshProUGUI state2Text;
+    public BoolData boolData;   
 
     private void OnEnable()
     {
@@ -18,10 +19,19 @@ public class State2 : StateExtension
     private void FixedUpdate() 
     {
         updateUIText.UpdateDecrementText(text, "Timer Decreasing: ");
+        StateTransition();
     }
 
     private void OnDisable()
     {
         state2Text.color = Color.white;
+    }
+
+    void StateTransition()
+    {
+        if (text.text == "Timer Decreasing: 0" && !boolData.GetData())
+        {
+            boolData.SetData(true);
+        }
     }
 }

@@ -103,10 +103,24 @@ public class NewestStateMachine : MonoBehaviour
         }
     }
 
+    void StateTransition() 
+    {
+        // loop through the list of statetransitions and if the bool data is true, then set the state to the new state
+        foreach (StateTransition stateTransition in states.Find(state => state.stateName == currentState.stateName).stateTransitions)
+        {
+            if (stateTransition.boolData.GetData())
+            {
+                SetState(states.Find(state => state.stateName == stateTransition.stateTransitionName));
+                stateTransition.boolData.SetData(false);
+            }
+        }
+    }
+
     // Update is called once per frame
     void Update()
     {
         SwitchState();
+        StateTransition();
     }
 }
 

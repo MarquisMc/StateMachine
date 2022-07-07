@@ -9,6 +9,7 @@ public class State1 : StateExtension
     public UpdateUIText updateUIText;
     public TextMeshProUGUI text;
     public TextMeshProUGUI state1Text;
+    public BoolData boolData;
 
     private void OnEnable() {
         state1Text.color = Color.yellow;
@@ -17,13 +18,24 @@ public class State1 : StateExtension
     private void FixedUpdate() 
     {
         updateUIText.UpdateIncrementText(text, "Timer Increasing: ");
+        StateTransition();
     }
-
-    private void OnDisable() {
+    
+    private void OnDisable() 
+    {
         state1Text.color = Color.white;
     }
 
-   public void TimerGoingUp() {
+    public void TimerGoingUp() 
+    {
         Debug.Log("Timer Going Up");
     } 
+    
+    void StateTransition() 
+    {
+        if (text.text == "Timer Increasing: 300" && !boolData.GetData())
+        {
+            boolData.SetData(true);
+        }
+    }
 }

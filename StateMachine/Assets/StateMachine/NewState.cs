@@ -11,11 +11,18 @@ public class NewState
     
     public StateExtension stateScript;
 
-    //public UltEvent StateTransitionEvent;
+    public List<StateTransition> stateTransitions = new List<StateTransition>();
 
     public NewState(string stateName, StateExtension stateScript)
     {
         this.stateName = stateName;
         this.stateScript = stateScript;
     }
+}
+
+[System.Serializable]
+public class StateTransition
+{
+    public string stateTransitionName;
+    public BoolData boolData;
 }

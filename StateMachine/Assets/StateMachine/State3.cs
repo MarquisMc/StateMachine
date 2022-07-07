@@ -11,6 +11,7 @@ public class State3 : StateExtension
     public UpdateUIText updateUIText;
     public TextMeshProUGUI text;
     public TextMeshProUGUI state3Text;
+    public BoolData boolData;
 
     private void OnEnable()
     {
@@ -20,10 +21,19 @@ public class State3 : StateExtension
     private void FixedUpdate()
     {
         updateUIText.UpdateIntText(text, updateUIText.interger, "Timer: ");
+        StateTransition();
     }
 
     private void OnDisable()
     {
         state3Text.color = Color.white;
+    }
+
+    void StateTransition()
+    {
+        if (text.text == "Timer: 0" && !boolData.GetData())
+        {
+            boolData.SetData(true);
+        }
     }
 }

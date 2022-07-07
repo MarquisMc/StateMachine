@@ -133,6 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 85618076}
   - component: {fileID: 85618075}
+  - component: {fileID: 85618077}
   m_Layer: 0
   m_Name: State 3
   m_TagString: Untagged
@@ -155,6 +156,7 @@ MonoBehaviour:
   updateUIText: {fileID: 266837325}
   text: {fileID: 266837326}
   state3Text: {fileID: 1279884596}
+  boolData: {fileID: 85618077}
 --- !u!4 &85618076
 Transform:
   m_ObjectHideFlags: 0
@@ -169,6 +171,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &85618077
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 85618074}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05e34ac1b565e4c4781217b69e9a1012, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: State 3 Transition bool
+  data: 0
 --- !u!1 &149057581
 GameObject:
   m_ObjectHideFlags: 0
@@ -461,6 +477,7 @@ GameObject:
   m_Component:
   - component: {fileID: 388262788}
   - component: {fileID: 388262787}
+  - component: {fileID: 388262789}
   m_Layer: 0
   m_Name: State 1
   m_TagString: Untagged
@@ -483,6 +500,7 @@ MonoBehaviour:
   updateUIText: {fileID: 266837325}
   text: {fileID: 266837326}
   state1Text: {fileID: 1004299949}
+  boolData: {fileID: 388262789}
 --- !u!4 &388262788
 Transform:
   m_ObjectHideFlags: 0
@@ -497,6 +515,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &388262789
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 388262786}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05e34ac1b565e4c4781217b69e9a1012, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: State 1 Transition bool
+  data: 0
 --- !u!1 &471442046
 GameObject:
   m_ObjectHideFlags: 0
@@ -665,13 +697,23 @@ MonoBehaviour:
   states:
   - stateName: State1
     stateScript: {fileID: 388262787}
+    stateTransitions:
+    - stateTransitionName: State2
+      boolData: {fileID: 388262789}
   - stateName: State2
     stateScript: {fileID: 1044994696}
+    stateTransitions:
+    - stateTransitionName: State1
+      boolData: {fileID: 1044994698}
   - stateName: State3
     stateScript: {fileID: 85618075}
+    stateTransitions:
+    - stateTransitionName: State3
+      boolData: {fileID: 85618077}
   currentState:
     stateName: 
     stateScript: {fileID: 0}
+    stateTransitions: []
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -1058,6 +1100,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1044994697}
   - component: {fileID: 1044994696}
+  - component: {fileID: 1044994698}
   m_Layer: 0
   m_Name: State 2
   m_TagString: Untagged
@@ -1080,6 +1123,7 @@ MonoBehaviour:
   updateUIText: {fileID: 266837325}
   text: {fileID: 266837326}
   state2Text: {fileID: 149057583}
+  boolData: {fileID: 1044994698}
 --- !u!4 &1044994697
 Transform:
   m_ObjectHideFlags: 0
@@ -1094,6 +1138,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1044994698
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1044994695}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05e34ac1b565e4c4781217b69e9a1012, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: State 2 Transition bool
+  data: 0
 --- !u!1 &1279884594
 GameObject:
   m_ObjectHideFlags: 0
