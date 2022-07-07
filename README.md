@@ -18,7 +18,7 @@ Following features
 Open Window/Package Manager, and add package from git URL...
 
 ```
-git hub url goes here
+https://github.com/MarquisMc/StateMachine.git
 ```
 
 ## How to use
