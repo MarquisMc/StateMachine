@@ -70,6 +70,13 @@ public class StateTemplate : StateExtension
 
 ![](StateMachine/Assets/Images/Setting%20up%20State%20Transitions%20gif.gif)
 
+### BoolData
+
+![](StateMachine/Assets/Images/BoolData.PNG)
+
+Bool data is a component that has a bool and a name attached in the editor 
+and that can be easily accessed from anywhere in the code.
+
 ### Live Example 
 
 #### Transitioning between states
