@@ -641,8 +641,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 537668220}
-  - component: {fileID: 537668219}
   - component: {fileID: 537668221}
+  - component: {fileID: 537668219}
   m_Layer: 0
   m_Name: StateMachine
   m_TagString: Untagged
@@ -657,17 +657,16 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 537668218}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5610f62a79e10a24ebaeac2e7ead7ab5, type: 3}
+  m_Script: {fileID: 11500000, guid: 27321fa1a2526a345addbcaeb8bbf9a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameOfStateMachine: Sample State Machine
-  state1Script: {fileID: 388262787}
-  state2Script: {fileID: 1044994696}
-  state3Script: {fileID: 85618075}
-  currentState: 0
-  previousState: 0
+  states: []
+  currentState:
+    stateName: 
+    stateScript: {fileID: 0}
+    stateTransitions: []
 --- !u!4 &537668220
 Transform:
   m_ObjectHideFlags: 0
