@@ -1,4 +1,6 @@
-# StateMachine
+# Drag and Drop StateMachine
+
+![](StateMachine/Assets/Images/DragAndDropStateMachine.png)
 
 ## Descripiton
 Drag and Drop Finite State Machine where the game designer can switch between different states and its state transitions with out having to code. 
