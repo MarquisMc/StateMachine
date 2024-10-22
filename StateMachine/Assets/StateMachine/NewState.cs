@@ -13,10 +13,13 @@ public class NewState
 
     public List<StateTransition> stateTransitions = new List<StateTransition>();
 
+    public List<IStateAction> actions = new List<IStateAction>();
+
     public NewState(string stateName, StateExtension stateScript)
     {
         this.stateName = stateName;
         this.stateScript = stateScript;
+        this.actions = new List<IStateAction>();
     }
 }
 

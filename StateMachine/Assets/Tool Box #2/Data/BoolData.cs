@@ -13,8 +13,15 @@ public class BoolData : DataBase
     // Set the bool
     public void SetData(bool newData)
     {
-        data = newData;
-        //Debug.Log(data);
+        try
+        {
+            data = newData;
+            //Debug.Log(data);
+        }
+        catch (System.Exception ex)
+        {
+            Debug.LogError($"Error setting data: {ex.Message}");
+        }
     }
 
     // when a bool is true turn another bool false

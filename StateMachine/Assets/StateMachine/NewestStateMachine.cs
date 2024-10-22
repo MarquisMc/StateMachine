@@ -34,6 +34,7 @@ public class NewestStateMachine : MonoBehaviour
             currentState = states.Contains(states[0]) ? states[0] : null;
             orginalState = currentState;
             stateDictionary[currentState].enabled = true;
+            ExecuteOnEnterActions(currentState);
         }
     }
 
@@ -72,12 +73,14 @@ public class NewestStateMachine : MonoBehaviour
 
         if (newState != currentState)
         {
+            ExecuteOnExitActions(currentState);
             previousState = currentState;
             currentState = newState;
 
             stateDictionary[previousState].enabled = false;
             stateDictionary[orginalState].enabled = false;
             stateDictionary[currentState].enabled = true;
+            ExecuteOnEnterActions(currentState);
         }
     }
 
@@ -113,12 +116,58 @@ public class NewestStateMachine : MonoBehaviour
             {
                 if (stateTransition.boolData.GetData())
                 {
+                    ExecuteOnTransitionActions(currentState);
                     SetState(states.Find(state => state.stateName == stateTransition.stateTransitionName));
                     stateTransition.boolData.SetData(false);
                 }
             }
         }
         
+    }
+
+    void ExecuteOnEnterActions(NewState state)
+    {
+        foreach (var action in state.actions)
+        {
+            try
+            {
+                action.OnEnter();
+            }
+            catch (System.Exception ex)
+            {
+                Debug.LogError($"Error executing OnEnter action: {ex.Message}");
+            }
+        }
+    }
+
+    void ExecuteOnExitActions(NewState state)
+    {
+        foreach (var action in state.actions)
+        {
+            try
+            {
+                action.OnExit();
+            }
+            catch (System.Exception ex)
+            {
+                Debug.LogError($"Error executing OnExit action: {ex.Message}");
+            }
+        }
+    }
+
+    void ExecuteOnTransitionActions(NewState state)
+    {
+        foreach (var action in state.actions)
+        {
+            try
+            {
+                action.OnTransition();
+            }
+            catch (System.Exception ex)
+            {
+                Debug.LogError($"Error executing OnTransition action: {ex.Message}");
+            }
+        }
     }
 
     // Update is called once per frame
